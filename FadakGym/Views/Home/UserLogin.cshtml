@@ -1,0 +1,89 @@
+﻿@model IEnumerable<FadakGym.TraineeRecord>
+    
+@{
+    ViewBag.Title = "UserLogin";
+}
+
+
+<h2>UserLogin</h2>
+@*@using (Html.BeginForm("UserLogin", "Home", FormMethod.Get))
+    {
+        @Html.TextBox("idd")
+        <input type="submit" value="Get info" />
+    }*@
+
+<table class="table">
+    <tr>
+        <th>
+            Weight
+        </th>
+        <th>
+            BodyFat
+        </th>
+        <th>
+            BMI
+        </th>
+        <th>
+            BodyWater
+        </th>
+        <th>
+            Protein
+        </th>
+        <th>
+            Muscle
+        </th>
+        <th>
+            Assessment Date
+        </th>
+        <th>
+            Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model){
+    <tr>
+        <td>
+            @*@Html.DisplayNameFor(model => model.Weight)*@
+            @item.Weight
+        </td>
+        <td>
+            @*@Model.BodyFat*@
+            @item.BodyFat   
+            @*@Html.DisplayNameFor(model => model.BodyFat)*@
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.BMI)*@
+            @item.BMI
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.BodyWater)*@
+            @item.BodyWater
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.Protein)*@
+            @item.Protein
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.Muscle)*@
+            @item.Muscle
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.AssessmentDate)*@
+            @item.AssessmentDate
+        </td>
+        <td>
+            @*@Html.DisplayNameFor(model => model.User.Name)*@
+            @item.User.Name
+        </td>
+    </tr>
+    }
+
+</table>
+<style>
+    body {
+        background: linear-gradient(45deg,bisque 30%,white 50%);
+        background-size: auto;
+        
+    }
+</style>

@@ -1,0 +1,88 @@
+﻿@model FadakGym.TraineeRecord
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TraineeRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyFat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyFat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyWater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyWater)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Muscle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Muscle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssessmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssessmentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TraineeRecordID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<style>
+    body {
+        background: linear-gradient(45deg,bisque 30%,white 50%);
+        background-size: auto;
+    }
+</style>
